@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocd-gitops-ui
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: argocd-gitops-ui
+  template:
+    metadata:
+      labels:
+        app: argocd-gitops-ui
+    spec:
+      containers:
+      - image: samsung-sds:5000/gitopspoc:v19
+        name: argocd-gitops-ui
+        ports:
+        - containerPort: 8080
