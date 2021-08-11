@@ -14,7 +14,7 @@ spec:
         app: argocd-gitops-ui
     spec:
       containers:
-        - image: apache2
+        - image: ""
           name: argocd-gitops-ui
           ports:
             - containerPort: 8080
