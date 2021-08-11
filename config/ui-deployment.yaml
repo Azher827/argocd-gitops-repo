@@ -14,7 +14,7 @@ spec:
         app: argocd-gitops-ui
     spec:
       containers:
-        - image: ""
+        - image: "${DOCKER_IMAGE_NAME}"
           name: argocd-gitops-ui
           ports:
             - containerPort: 8080
