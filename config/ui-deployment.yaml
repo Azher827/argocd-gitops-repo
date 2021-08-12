@@ -14,7 +14,7 @@ spec:
         app: argocd-gitops-ui
     spec:
       containers:
-        - image: "samsung-sds:5000/gitopspoc:v41"
+        - image: "samsung-sds:5000/gitopspoc:v42"
           name: argocd-gitops-ui
           ports:
             - containerPort: 8080
