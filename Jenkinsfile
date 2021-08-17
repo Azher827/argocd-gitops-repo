@@ -1,4 +1,4 @@
-def DOCKER_IMAGE_NAME="samsung-sds:5000/gitopspoc:v${CURRENT_BUILD}"
+def DOCKER_IMAGE_NAME="${CURRENT_BUILD}"
 pipeline {
     parameters {
       string 'CURRENT_BUILD'
@@ -14,7 +14,6 @@ pipeline {
                 {
                 dir('config')
                 {
-                    sh "echo ${DOCKER_IMAGE_NAME}"
                     sh "yq e -i '.spec.template.spec.containers.[0].image = \"${DOCKER_IMAGE_NAME}\"' ui-deployment.yaml"
                     withCredentials([gitUsernamePassword(credentialsId: 'e65da257-c14c-422d-8383-0be7e96d5763', gitToolName: 'Default')])
                     {
