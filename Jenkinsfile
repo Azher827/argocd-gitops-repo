@@ -17,7 +17,7 @@ pipeline {
                     withCredentials([gitUsernamePassword(credentialsId: 'e65da257-c14c-422d-8383-0be7e96d5763', gitToolName: 'Default')])
                     {
                         sh 'git add ui-deployment.yaml'
-                        sh 'git commit -m "changes for new version $IMAGE_NAME"'
+                        sh 'git commit -m "changes for new version"'
                         sh 'git push'
                     }
                 }
