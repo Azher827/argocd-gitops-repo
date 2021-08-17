@@ -1,7 +1,6 @@
-def DOCKER_IMAGE_NAME="${CURRENT_BUILD}"
 pipeline {
     parameters {
-      string 'CURRENT_BUILD'
+      string 'DOCKER_IMAGE_NAME'
     }
     agent any
     stages
