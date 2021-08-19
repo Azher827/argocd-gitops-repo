@@ -19,7 +19,7 @@ pipeline {
                         sh 'git config --global push.default simple'
                         sh 'git add ui-deployment.yaml'
                         sh 'git commit -m "changes for new version ${DOCKER_IMAGE_NAME}"'
-                        sh 'git push'
+                        sh 'git push origin HEAD:main'
                     }
                 }
                 }
